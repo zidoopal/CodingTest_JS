@@ -1,4 +1,3 @@
 function solution(numbers) {
-  let answer = numbers.map((num) => num * 2);
-  return answer;
+  return numbers.map((a)=>a*2);
 }

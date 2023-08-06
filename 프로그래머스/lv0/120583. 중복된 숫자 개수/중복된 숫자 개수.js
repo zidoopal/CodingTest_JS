@@ -1,4 +1,5 @@
 function solution(array, n) {
-    var answer = 0;
-    return answer;
+  let ans = 0;
+  ans = array.filter((a) => a === n);
+  return ans.length;
 }

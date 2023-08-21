@@ -1,11 +1,8 @@
-function solution(absolutes, signs) {
-  // 절댓값 , 정수들의 부호
-  // signs[i]가 true 이면, absolutes[i]가 양수
+function solution(abs, signs) {
   let ans = 0;
-  for (let i = 0; i < absolutes.length; i++) {
-    signs[i] === true ? (ans += absolutes[i]) : (ans -= absolutes[i]);
+  for (let i = 0; i < abs.length; i++) {
+    let sign = signs[i] === true ? 1 : -1;
+    ans += abs[i] * sign;
   }
   return ans;
 }
-
-console.log(solution([4, 7, 12], [true, false, true]));

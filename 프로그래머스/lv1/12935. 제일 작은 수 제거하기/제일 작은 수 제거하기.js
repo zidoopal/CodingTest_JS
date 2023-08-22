@@ -1,0 +1,7 @@
+function solution(arr) {
+    const min = Math.min(...arr)
+    const idx = arr.indexOf(min)
+    arr.splice(idx, 1);
+    
+  return arr.length >1 ? arr : [-1]
+}

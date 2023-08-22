@@ -1,7 +1,9 @@
 function solution(s) {
-  const even = s[s.length / 2 - 1] + s[s.length / 2];
-  const odd = s[Math.floor(s.length / 2)];
-  // 홀수일 경우 - Math.floor[배열의 길이 / 2 ] 번째 글자 return
-  // 짝수일 경우 - [배열의 길이 / 2] -1, [배열의 길이] return
-  return s.length % 2 === 0 ? even : odd;
+  let answer = '';
+  let idx = s.length / 2;
+  // idx 값이 정수 === true이면 answer에 s[idx-1] + s[idx]
+  if (Number.isInteger(idx)) answer = s[idx - 1] + s[idx];
+  // 아니면 실수 값을 내림
+  else answer = s[Math.floor(idx)];
+  return answer;
 }

@@ -1,4 +1,3 @@
-
 function solution(s) {
   // s.length가 4 or 6 && typeof(s) == number 확인해주는 함수 만들기 >> 정규식 사용하기
   const regex = /^\d{4}$|^\d{6}$/;

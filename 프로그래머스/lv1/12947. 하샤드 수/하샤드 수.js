@@ -1,12 +1,10 @@
 function solution(x) {
-  // 각 자릿수의 합을 저장 할 sum 변수
-  let sum = 0;
+  let a = 0;
+  let s = (x + '').split('').map(Number);
 
-  //
-  let num = x;
-  while (num > 0) {
-    sum += num % 10; // 일의 자리
-    num = Math.floor(num / 10);
+  for (let i of s) {
+    a += i;
   }
-  return x % sum === 0;
+
+  return x % a == 0 ? true : false;
 }

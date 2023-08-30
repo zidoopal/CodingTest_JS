@@ -1,10 +1,10 @@
 function solution(x) {
-  let a = 0;
-  let s = (x + '').split('').map(Number);
+  let ans = 0;
 
-  for (let i of s) {
-    a += i;
+  let str = x + '';
+  str = str.split('').map(Number);
+  for (let s of str) {
+    ans += s;
   }
-
-  return x % a == 0 ? true : false;
+  return x % ans === 0 ? true : false;
 }

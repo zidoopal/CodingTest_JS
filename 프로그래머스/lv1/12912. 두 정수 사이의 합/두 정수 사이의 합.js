@@ -1,7 +1,11 @@
 function solution(a, b) {
-  // a와 b사이에 속한 모든 정수의 합 return
-  // 절댓값!!!!
+  let sum = 0;
 
-  return ((a + b) * (Math.abs(a - b) + 1)) / 2;
+  let start = Math.min(a, b);
+  let end = Math.max(a, b);
+
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  return sum;
 }
-

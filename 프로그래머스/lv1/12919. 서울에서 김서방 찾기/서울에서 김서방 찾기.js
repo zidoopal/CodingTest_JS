@@ -1,5 +1,8 @@
 function solution(seoul) {
-  let idx = seoul.indexOf('Kim');
-  // X의 위치를 찾아 string을 반환하는 함수
-  return `김서방은 ${idx}에 있다`;
+  //indexOf() 사용하기
+  const indexOfKim = seoul.indexOf('Kim');
+
+  return `김서방은 ${indexOfKim}에 있다`;
 }
+
+console.log(solution(['Jane', 'Kim']));

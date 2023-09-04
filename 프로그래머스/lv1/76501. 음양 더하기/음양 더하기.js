@@ -1,7 +1,9 @@
-function solution(abs, signs) {
-  let ans = 0;
-  for (let i = 0; i < abs.length; i++) {
-    signs[i] === true ? (ans += abs[i]) : (ans -= abs[i]);
+function solution(absolutes, signs) {
+  let sum = 0;
+
+  for (let i = 0; i < absolutes.length; i++) {
+    signs[i] === true ? (sum += absolutes[i]) : (sum += absolutes[i] * -1);
   }
-  return ans;
+
+  return sum;
 }
